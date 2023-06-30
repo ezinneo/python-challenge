@@ -1,0 +1,9 @@
+Total Months: {total_months} 
+-------------------------
+Total Profit/Losses:: 22564198.0
+-------------------------
+ Average Changes -8311.11 
+-------------------------
+Greatest Increase in profits: 16-Aug 1862002.0 
+-------------------------
+Greatest Decrease in profits: 14-Feb -1825558.0 

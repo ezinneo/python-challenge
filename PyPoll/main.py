@@ -62,3 +62,19 @@ for candidate, votes in candidate_votes.items():
     print(f"{candidate}: {votes} votes")
 
 print("Winner:", winner)
+
+#Print the output (to text file)
+output_file = os.path.join('.', 'analysis', 'election_results.txt')
+with open(output_file, "w") as file:
+    file.write("Election Results\n")
+    file.write("-------------------------\n")
+    file.write(f"Total Votes: {total_votes}\n")
+    file.write("-------------------------\n")
+    file.write("Candidate Names, Percentage of Votes and Total Number of votes per candidate:\n")
+    for candidate, percentage in percentage_votes.items():
+        file.write(f"{candidate}: {round(percentage)}%\n")
+    file.write("-------------------------\n")
+    file.write(f"Winner: {winner}\n")
+
+# Print a message to indicate the successful export of the results
+print("Election results exported to:", output_file)

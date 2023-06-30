@@ -79,3 +79,19 @@ print ("Total Profit/Losses: $", round(total_profit_losses))
 print ("Average Change: $", round(math.fsum(changes_profit_loss)/len(changes_profit_loss),2))
 print ("Greatest Increase in Profits: ", greatest_increase_date, "$", round(greatest_increase_profit))
 print ("Greatest Decrease in Profits: ", greatest_decrease_date, "$", round(greatest_decrease_profit))
+
+#Print the output (to text file)
+output_file = os.path.join('.', 'analysis', 'budget_data.txt')
+with open(output_file, "w") as file:
+    file.write("Total Months: {total_months} \n")
+    file.write("-------------------------\n")
+    file.write(f"Total Profit/Losses:: {total_profit_losses}\n")
+    file.write("-------------------------\n")
+    file.write(f" Average Changes {round(math.fsum(changes_profit_loss)/len(changes_profit_loss),2)} \n")
+    file.write("-------------------------\n")
+    file.write(f"Greatest Increase in profits: {greatest_increase_date} {greatest_increase_profit} \n")
+    file.write("-------------------------\n")
+    file.write(f"Greatest Decrease in profits: {greatest_decrease_date} {greatest_decrease_profit} \n")
+
+# Print a message to indicate the successful export of the results
+print("Budget Data:", output_file)
